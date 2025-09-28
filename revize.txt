@@ -1,0 +1,88 @@
+Číslo revize	unique ID
+Provozovatel	výběr ze zákazníků
+Ulice		propsat ze zákazníků
+PSČ		propsat ze zákazníků
+Výrobce		výběr ze zařízení
+Typ zařízení	propsat ze zařízení
+Typ		propsat ze zařízení
+Druh pohonu	propsat ze zařízení
+Výrobní číslo	propsat ze zařízení
+Rok výroby	propsat ze zařízení
+Inventární / evidenční číslo	propsat ze zařízení
+Vyložení min.	propsat ze zařízení
+Vyložení max.	propsat ze zařízení
+Max. nosnost	propsat ze zařízení
+Výška zdvihu	propsat ze zařízení
+Datum zahájení úkonu:	datum
+Příští revizní zkouška jeřábu dle čl. 6.1 ČSN 27 0142/2014	datum zahájení úkonu +2 roky
+Příští revize jeřábu dle čl. 6.1 ČSN 27 0142/2014	datum zahájení úkonu +1 rok
+
+Rozsah revize a zjištěné závady:
+--------------------------------
+
+A.Kontrola technické dokumentace a dokladů jeřábu dle nařízení vlády č. 378/2001 Sb. § 2e, f, g, ČSN 27 0142/2014
+-----------------------------------------------------------------------------------------------------------------------
+Zápis o poslední revizi elektrického zařízení	Předložen; Nepředložen; Není součástí;
+Zápis o poslední provedené revizi zdvihacího zařízení	Předložen; Nepředložen; Není součástí;
+Zápis o poslední provedené inspekci		Předložen; Nepředložen; Není součástí;
+Deník zdvihacího zařízení	Předložen; Nepředložen; Není součástí;
+Návod na obsluhu zdvihacího zařízení	Předložen; Nepředložen; Není součástí;
+Systém bezpečné práce	Předložen; Nepředložen; Není součástí;
+Výkresová dokumentace strojní a elektrické části	Předložen; Nepředložen; Není součástí;
+Zápisy o podrobných prohlídkách nosných ocelových konstrukcí jeřábu podle ČSN 73 2604	Předložen; Nepředložen; Není součástí;
+Dokumentaci a doklad o přeměření dočasné jeřábové dráhy podle ČSN 27 2435	Předložen; Nepředložen; Není součástí;
+Technická dokumentace základu nebo kotvení zdvihacího zařízení	Předložen; Nepředložen; Není součástí;
+Zpráva o výchozí revizi přívodu podle ČSN 33 1500, ČSN 33 2000-6 a o uzemnění jeřábové dráhy podle ČSN 33 2000-5-54 ed.3	Předložen; Nepředložen; Není součástí;
+
+B.Prohlídka dle ČSN 270142, čl.5, odst. 5.1, čl.13, odst.13.1, čl.15, odst.15.3 Obecně platné podmínky pro zkoušení jeřábů
+---------------------------------------------------------------------------------------------------------------------------
+Dostupnost návodu k obsluze	Vyhovuje; Nevyhovuje; Není součástí
+Provádění zápisů v deníku zdvihacího zařízení	Vyhovuje; Nevyhovuje; Není součástí
+Úroveň prováděné údržby a stav mazání zařízení	Vyhovuje; Nevyhovuje; Není součástí
+Přístupy na jeřáb a stanoviště obsluhy	Vyhovuje; Nevyhovuje; Není součástí
+Zjevné porušení nosné konstrukce (svary, šroubové spoje, koroze, trvalé deformace, trhliny atd.) Vyhovuje; Nevyhovuje; Není součástí
+Stav nosných orgánů, háků, kladině, kotvení atd.	Vyhovuje; Nevyhovuje; Není součástí
+U jeřábů ovládaných z kabiny její provedení, vytápění, ventilaci a osvětlení	Vyhovuje; Nevyhovuje; Není součástí
+Dostupnost hasícího přístroje	Vyhovuje; Nevyhovuje; Není součástí
+Provedení, čitelnost a funkce všech informačních a výstražných označení a zařízení	Vyhovuje; Nevyhovuje; Není součástí
+Funkce ukazatele vyložení	Vyhovuje; Nevyhovuje; Není součástí
+Funkce anemometru	Vyhovuje; Nevyhovuje; Není součástí
+Použitelnost a vhodnost komunikačních systémů	Vyhovuje; Nevyhovuje; Není součástí
+
+C.Funkční zkouška dle ČSN 270142, čl.5, odst. 5.2, čl.13, odst.13.1.4, čl.15 odst.15.3 Obecně platné podmínky pro zkoušení jeřábů
+---------------------------------------------------------------------------------------------------------------------------------
+Funkce a správné označení ovládacích zařízení	Vyhovuje; Nevyhovuje; Není součástí
+Seřízení a funkce zabezpečovacích zařízení (koncových a omezovacích vypínačů, signálních zařízení atd.)	Vyhovuje; Nevyhovuje; Není součástí
+Správné funkce technologických zařízení charakterizující použití jeřábu (Zařízení pro zavěšení nebo uchopení břemen atd.)	Vyhovuje; Nevyhovuje; Není součástí
+Správnost funkce a označení jednotlivých ovládacích zařízení jeřábu	Vyhovuje; Nevyhovuje; Není součástí
+Funkce zastavení stop	Vyhovuje; Nevyhovuje; Není součástí
+Jednotlivé pohybové mechanismy, účinnost brzdících systémů, plynulost pohybů a jejich regulace	Vyhovuje; Nevyhovuje; Není součástí
+Správné seřízení a funkčnost všech použitých omezovacích a indikačních zařízení.	Vyhovuje; Nevyhovuje; Není součástí
+V případě vybavení jeřábu dálkovým ovládáním, funkčnost všech ovladačem řízených funkcí	Vyhovuje; Nevyhovuje; Není součástí
+
+D.Zkoušky se zatížením dle ČSN 270142, čl.5, odst. 5.3, čl.13, odst.13.1.4, čl.15 odst.15.4 Obecně platné podmínky pro zkoušení jeřábů
+---------------------------------------------------------------------------------------------------------------------------------------
+Dynamická zkouška se zkušebním břemenem o hmotnosti 1,1násobku nosnosti jeřábu 1)	Vyhovuje; Nevyhovuje; Není součástí
+Zkouška omezovače nosnosti 2)	Vyhovuje; Nevyhovuje; Není součástí
+Zkouška stability 3)	Vyhovuje; Nevyhovuje; Není součástí
+
+1)	Zkušebním břemenem o hmotnosti 1,1násobku nosnosti jeřábu byly vykonány všechny dovolené pohyby nejnižšími až nejvyššími rychlostmi včetně zkoušky brzd a bezpečnostních zařízení. Břemenem rovným jmenovité nosnosti jeřábu byly vykonány současně všechny pohyby uvedené v technické dokumentaci. U jeřábů vybavených dvěma brzdami byla prověřena činnost každé z nich samostatně.
+2) 	Omezovač nosnosti se musí aktivovat při nejnižší rychlosti pracovní rychlosti do 115% nosnosti, pokud výrobce nepředepíše v návodu nepředepíše jinak. Provedena pro dva body křivky nosnosti.
+3)	Provedena k ověření bezpečnosti jeřábu proti ztrátě stability. Zkušební břemeno o hmotnosti 1,25násobku nosnosti jeřábu bylo opatrně nadzvednuto do výšky 10 cm nad terén v nejnepříznivější poloze s ohledem na stabilitu jeřábu (dle předpisu výrobce)
+
+E. Použitá kalibrovaná měřidla
+Posuvné měřidlo analogové 0-200mm
+Posuvné měřidlo analogové 0-500mm
+Hloubkoměr analogový 0-200mm
+Ocelový svinovací 5 ti metr
+Laserový měřicí přístroj 
+Nářadí a pomůcky
+Jeřábová váha
+
+F. Závěr
+Hodnocení	Technický stav zdvihacího zařízení vyhovuje bezpečnému provozu.; Technický stav jeřábu vykazuje méně závažné závady, uvedené v souhrnu zajištěných závad, které vytvářejí možná rizika bezpečného provozu. Do doby jejich odstranění je další provoz možný podle podmínek stanovených provozovatelem na základě doporučení reviz; Technický stav jeřábu je nevyhovující v důsledku závad, uvedený v souhrnu zajištěných závad, které vytvářejí rizika bezpečného provozu.
+
+
+
+	
+

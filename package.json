@@ -1,0 +1,25 @@
+{
+  "name": "revize",
+  "version": "1.0.0",
+  "description": "Aplikace pro správu revizí zdvihacích zařízení",
+  "scripts": {
+    "start": "concurrently \"npm run start:api\" \"npm run start:app\"",
+    "dev": "concurrently \"npm run dev:api\" \"npm run start:app\"",
+    "start:app": "cd revize-app && npm start",
+    "start:api": "cd revize-api && npm start",
+    "dev:api": "cd revize-api && npm run dev",
+    "install:all": "npm run install:api && npm run install:app",
+    "install:app": "cd revize-app && npm install",
+    "install:api": "cd revize-api && npm install"
+  },
+  "keywords": [
+    "revize",
+    "jeřáby",
+    "zdvihací zařízení"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

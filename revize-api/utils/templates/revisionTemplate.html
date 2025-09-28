@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revizní zpráva vyhrazeného zdvihacího zařízení</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 1.5cm 1.5cm 2.5cm 1.5cm;
+            @bottom-center {
+                content: "Stránka " counter(page) " z " counter(pages);
+                font-size: 10pt;
+                font-family: 'Times New Roman', serif;
+                color: #000;
+            }
+        }
+        
+        body {
+            font-family: 'Times New Roman', serif;
+            font-size: 11pt;
+            line-height: 1.3;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            background: white;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 16pt;
+            font-weight: bold;
+            margin: 0 0 25px 0;
+            padding: 15px 0;
+            text-transform: uppercase;
+            border-bottom: 2px solid #000;
+        }
+        
+        h2 {
+            font-size: 13pt;
+            font-weight: bold;
+            margin: 15px 0 10px 0;
+            padding: 5px 0 3px 0;
+            border-bottom: 1px solid #333;
+            page-break-after: avoid;
+        }
+        
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            page-break-after: avoid;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 8px 0 15px 0;
+            page-break-inside: auto;
+        }
+        
+        table, th, td {
+            border: 1px solid #000;
+        }
+        
+        th, td {
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+            font-size: 11pt;
+        }
+        
+        th {
+            background-color: #f5f5f5;
+            font-weight: bold;
+            page-break-after: avoid;
+        }
+        
+        tr {
+            page-break-inside: auto;
+        }
+        
+        .header-info {
+            text-align: center;
+            margin: 0 0 30px 0;
+            font-size: 12pt;
+        }
+        
+        .signature-area {
+            margin: 25px 0;
+            border: 1px solid #000;
+            padding: 20px;
+        }
+        
+        .checkbox {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #000;
+            margin-right: 6px;
+            text-align: center;
+            line-height: 12px;
+            font-size: 10pt;
+            vertical-align: middle;
+        }
+        
+        .page-break {
+            page-break-before: always;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .section {
+            margin-bottom: 15px;
+        }
+        
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        
+        ul {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        
+        li {
+            margin: 5px 0;
+        }
+        
+        p {
+            margin: 10px 0;
+        }
+        
+        .success {
+            color: #006400;
+        }
+        
+        .error {
+            color: #b30000;
+            font-weight: bold;
+        }
+        
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .page-break {
+                page-break-before: always !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<h1>Revizní zpráva vyhrazeného zdvihacího zařízení</h1>
+
+<div class="header-info">
+    <strong>Typ úkonu:</strong> {{procedure_type}}
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. a) - Identifikace provozovatele</h2>
+    <table>
+        <tr>
+            <td><strong>Název a sídlo právnické osoby:</strong></td>
+            <td>{{customer.company_name}}<br>{{customer.street}}<br>{{customer.postal_code}} {{customer.city}}<br>IČO: {{customer.ico}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. b) - Určení typu úkonu a předpisu</h2>
+    <table>
+        <tr>
+            <td><strong>Typ úkonu:</strong></td>
+            <td>Zkouška vyhrazeného zdvihacího zařízení</td>
+        </tr>
+        <tr>
+            <td><strong>Provedeno podle předpisu:</strong></td>
+            <td>nařízení vlády č. 193/2022 Sb., příloha č. 2, bod 2</td>
+        </tr>
+        <tr>
+            <td><strong>Doplňující technické normy:</strong></td>
+            <td>ČSN 27 0142/2023, nařízení vlády č. 378/2001 Sb., technické podmínky výrobce</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. c) - Popis a technické parametry revidovaného vyhrazeného zdvihacího zařízení</h2>
+    
+    <h3>Základní identifikace:</h3>
+    <table>
+        <tr>
+            <td><strong>Název zařízení:</strong></td>
+            <td>{{equipment.manufacturer}} {{equipment.model}}</td>
+        </tr>
+        <tr>
+            <td><strong>Typ zařízení:</strong></td>
+            <td>{{equipment.equipment_type}}</td>
+        </tr>
+        <tr>
+            <td><strong>Výrobce/dodavatel:</strong></td>
+            <td>{{equipment.manufacturer}}</td>
+        </tr>
+        <tr>
+            <td><strong>Rok výroby:</strong></td>
+            <td>{{equipment.year_of_manufacture}}</td>
+        </tr>
+        <tr>
+            <td><strong>Výrobní číslo:</strong></td>
+            <td>{{equipment.serial_number}}</td>
+        </tr>
+        <tr>
+            <td><strong>Inventární/evidenční číslo:</strong></td>
+            <td>{{equipment.inventory_number}}</td>
+        </tr>
+    </table>
+
+    <h3>Technické parametry:</h3>
+    <table>
+        <tr>
+            <td><strong>Typové označení:</strong></td>
+            <td>{{equipment.model}}</td>
+        </tr>
+        <tr>
+            <td><strong>Nosnost zdvihu:</strong></td>
+            <td>{{equipment.max_load}} kg</td>
+        </tr>
+        <tr>
+            <td><strong>Vyložení min./max.:</strong></td>
+            <td>{{equipment.min_reach}}/{{equipment.max_reach}} m</td>
+        </tr>
+        <tr>
+            <td><strong>Výška zdvihu:</strong></td>
+            <td>{{equipment.lift_height}} m</td>
+        </tr>
+        {{#if configuration.description}}
+        <tr>
+            <td><strong>Konfigurace:</strong></td>
+            <td>{{configuration.description}}</td>
+        </tr>
+        {{/if}}
+        <tr>
+            <td><strong>Umístění:</strong></td>
+            <td>{{equipment.location}}</td>
+        </tr>
+    </table>
+
+    <h3>Zařazení dle NV 193/2022:</h3>
+    <table>
+        <tr>
+            <td><strong>Kategorie:</strong></td>
+            <td>
+                {{#if equipment.category}}
+                    {{#eq equipment.category "a"}}a) Jeřáby a zdvihadla včetně kladkostrojů s motorickým pohonem o nosnosti přesahující 1000 kg a jeřáby a zdvihadla včetně kladkostrojů s ručním pohonem o nosnosti přesahující 5000 kg{{/eq}}
+                    {{#eq equipment.category "b"}}b) Pracovní plošiny s motorickým pohonem a výškou zdvihu přesahující 1,5 m, pojízdné zdvihací pracovní plošiny, závěsné plošiny a stožárové šplhací pracovní plošiny{{/eq}}
+                    {{#eq equipment.category "c"}}c) Výtahy pro dopravu osob, osob a nákladu nebo jen nákladu a svislé zdvihací plošiny o nosnosti přesahující 100 kg a výškou zdvihu přesahující 2 m{{/eq}}
+                    {{#eq equipment.category "d"}}d) Stavební výtahy pro přepravu osob a nákladu{{/eq}}
+                    {{#eq equipment.category "e"}}e) Regálové zakladače se svisle pohyblivými stanovišti obsluhy a jejich přesuvny{{/eq}}
+                {{else}}
+                    Neuvedeno
+                {{/if}}
+            </td>
+        </tr>
+        <tr>
+            <td><strong>Třída:</strong></td>
+            <td>
+                {{#if equipment.equipment_class}}
+                    {{#eq equipment.equipment_class "I"}}I. třída dle § 4 odst. 1 - jeřáby a zdvihadla včetně kladkostrojů s motorickým pohonem o nosnosti přesahující 3200 kg a jeřáby a zdvihadla včetně kladkostrojů s ručním pohonem o nosnosti přesahující 5000 kg, stavební výtahy pro přepravu osob a nákladu, regálové zakladače se svisle pohyblivými stanovišti obsluhy a jejich přesuvny{{/eq}}
+                    {{#eq equipment.equipment_class "II"}}II. třída dle § 4 odst. 2 - jeřáby a zdvihadla včetně kladkostrojů s motorickým pohonem o nosnosti přesahující 1000 kg a nepřesahující nosnost 3200 kg, výtahy pro dopravu osob, osob a nákladu nebo jen nákladu a svislé zdvihací plošiny přesahující nosnost 100 kg a výškou zdvihu přesahující 2 m, pracovní plošiny s motorickým pohonem a s výškou zdvihu přesahující 1,5 m{{/eq}}
+                {{else}}
+                    Neuvedeno
+                {{/if}}
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. d) - Identifikace revizního technika</h2>
+    <table>
+        <tr>
+            <td><strong>Jméno a příjmení:</strong></td>
+            <td>{{revision.technician_name}}</td>
+        </tr>
+        <tr>
+            <td><strong>Evidenční číslo osvědčení:</strong></td>
+            <td>{{revision.certification_number}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. e) - Časové údaje</h2>
+    <table>
+        <tr>
+            <td><strong>Datum zahájení zkoušky:</strong></td>
+            <td>{{#if revision.test_start_date}}{{formatDate revision.test_start_date}}{{else}}{{formatDate revision.revision_date}}{{/if}}</td>
+        </tr>
+        <tr>
+            <td><strong>Datum ukončení zkoušky:</strong></td>
+            <td>{{#if revision.test_end_date}}{{formatDate revision.test_end_date}}{{else}}{{formatDate revision.revision_date}}{{/if}}</td>
+        </tr>
+        <tr>
+            <td><strong>Datum vypracování revizní zprávy:</strong></td>
+            <td>{{#if revision.report_date}}{{formatDate revision.report_date}}{{else}}{{formatDate revision.revision_date}}{{/if}}</td>
+        </tr>
+        <tr>
+            <td><strong>Datum předání revizní zprávy:</strong></td>
+            <td>{{#if revision.handover_date}}{{formatDate revision.handover_date}}{{else}}{{formatDate revision.revision_date}}{{/if}}</td>
+        </tr>
+        <tr>
+            <td><strong>Doba platnosti revizní zprávy:</strong></td>
+            <td>do {{formatDate revision.next_revision_date}} (2 roky pro věžový jeřáb dle přílohy č. 2, bod 2.2)</td>
+        </tr>
+    </table>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. f) - Soupis použitých měřicích přístrojů</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Měřicí přístroj</th>
+                <th>Rozsah</th>
+                <th>Účel použití</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if measuring_instruments.length}}
+                {{#each measuring_instruments}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{range}}</td>
+                    <td>{{purpose}}</td>
+                </tr>
+                {{/each}}
+            {{else}}
+            <tr>
+                <td>Posuvné měřidlo analogové</td>
+                <td>0-200mm</td>
+                <td>Měření rozměrů</td>
+            </tr>
+            <tr>
+                <td>Posuvné měřidlo analogové</td>
+                <td>0-500mm</td>
+                <td>Měření rozměrů</td>
+            </tr>
+            <tr>
+                <td>Hloubkoměr analogový</td>
+                <td>0-200mm</td>
+                <td>Měření hloubek</td>
+            </tr>
+            <tr>
+                <td>Ocelový svinovací metr</td>
+                <td>5 m</td>
+                <td>Měření délek</td>
+            </tr>
+            <tr>
+                <td>Laserový měřicí přístroj</td>
+                <td>-</td>
+                <td>Přesné měření</td>
+            </tr>
+            <tr>
+                <td>Jeřábová váha</td>
+                <td>-</td>
+                <td>Zkouška zatížením</td>
+            </tr>
+            <tr>
+                <td>Nářadí a pomůcky</td>
+                <td>-</td>
+                <td>Montáž/demontáž</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. g) - Seznam podkladů použitých k provedení zkoušky včetně jejich vyhodnocení</h2>
+    
+    <h3>Předložené podklady:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Podklad</th>
+                <th>Stav</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if documentation_check_items.length}}
+                {{#each documentation_check_items}}
+                <tr>
+                    <td>{{label}}</td>
+                    <td><span class="{{value_class}}">{{#if (eq value "Vyhovuje")}}Předložen{{else if (eq value "Nevyhovuje")}}Nepředložen{{else}}{{value}}{{/if}}</span></td>
+                </tr>
+                {{/each}}
+            {{else}}
+            <tr>
+                <td>Průvodní dokumentace jeřábu</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Provozní deník zdvihacího zařízení</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Systém bezpečné práce (SBP)</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Výkresová dokumentace strojní a elektrické části</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Zápis o výchozí revizi elektrického zařízení</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Zápis o poslední revizi elektrického zařízení</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Zápis o poslední provedené revizi jeřábu</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Zápis o poslední provedené inspekci</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Návod na obsluhu jeřábu</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Zápisy o prohlídkách nosných konstrukcí dle ČSN 73 2604</td>
+                <td>Předložen</td>
+            </tr>
+            <tr>
+                <td>Technická dokumentace základu nebo kotvení jeřábu</td>
+                <td>Předložen</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+
+    <h3>Nepředložené podklady:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Podklad</th>
+                <th>Důvod nepředložení</th>
+                <th>Vliv na bezpečnost</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dokumentace dočasné jeřábové dráhy dle ČSN 27 2435</td>
+                <td>Není součástí instalace</td>
+                <td>Bez vlivu - věžový jeřáb na stálém stanovišti</td>
+            </tr>
+            <tr>
+                <td>Zpráva o revizi přívodu dle ČSN 33 1500, ČSN 33 2000-6</td>
+                <td>Není součástí</td>
+                <td>Bez vlivu na bezpečnost zkoušeného zařízení</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. h) - Soupis provedených úkonů</h2>
+    
+    <h3>A. Kontrola technické dokumentace</h3>
+    <ul>
+        <li>Ověření kompletnosti a aktuálnosti dokumentace</li>
+        <li>Kontrola souladu dokumentace se skutečným stavem</li>
+        <li>Ověření platnosti předchozích revizí a kontrol</li>
+    </ul>
+
+    <h3>B. Vizuální prohlídka dle ČSN 27 0142/2023</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Kontrolovaná položka</th>
+                <th>Výsledek</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if equipment_check_items.length}}
+                {{#each equipment_check_items}}
+                <tr>
+                    <td>{{label}}</td>
+                    <td><span class="checkbox">{{#if (eq value "Vyhovuje")}}✓{{/if}}</span> <span class="{{value_class}}">{{value}}</span></td>
+                </tr>
+                {{/each}}
+            {{else}}
+            <tr>
+                <td>Dostupnost návodu výrobce</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Provádění zápisů v deníku</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Údržba a mazání</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Přístupy a stanoviště obsluhy</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Nosná konstrukce (svary, spoje, koroze)</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Nosné orgány, háky, kladnice</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Hasící přístroj</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Označení a výstražná zařízení</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Ukazatel vyložení</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Komunikační systémy</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+
+    <h3>C. Funkční zkouška dle ČSN 27 0142/2023</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Kontrolovaná položka</th>
+                <th>Výsledek</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if functional_test_items.length}}
+                {{#each functional_test_items}}
+                <tr>
+                    <td>{{label}}</td>
+                    <td><span class="checkbox">{{#if (eq value "Vyhovuje")}}✓{{/if}}</span> <span class="{{value_class}}">{{value}}</span></td>
+                </tr>
+                {{/each}}
+            {{else}}
+            <tr>
+                <td>Ovládací zařízení</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Zabezpečovací zařízení</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Technologická zařízení</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Funkce STOP</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Pohybové mechanismy a brzdy</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Omezovací a indikační zařízení</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Dálkové ovládání</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+
+    <h3>D. Zkoušky se zatížením dle ČSN 27 0142/2023</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Typ zkoušky</th>
+                <th>Výsledek</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#if load_test_items.length}}
+                {{#each load_test_items}}
+                <tr>
+                    <td>{{label}}</td>
+                    <td><span class="checkbox">{{#if (eq value "Vyhovuje")}}✓{{/if}}</span> <span class="{{value_class}}">{{value}}</span></td>
+                </tr>
+                {{/each}}
+            {{else}}
+            <tr>
+                <td>Dynamická zkouška (1,1x nosnost)</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            <tr>
+                <td>Zkouška omezovače nosnosti (115%)</td>
+                <td><span class="checkbox">✓</span> Vyhovuje</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+
+    <p><strong>Poznámky k zkouškám zatížením:</strong></p>
+    <ul>
+        <li>Zkušebním břemenem {{#if equipment.max_load}}{{multiply equipment.max_load 1.1}}{{else}}2200{{/if}} kg (1,1x nosnost) byly vykonány všechny pohyby</li>
+        <li>Prověřena činnost brzd a bezpečnostních zařízení</li>
+        <li>Omezovač nosnosti aktivován při 115% nosnosti pro dva body křivky</li>
+        <li>Zkouška stability nebyla součástí (věžový jeřáb na stálém stanovišti)</li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. i) - Soupis zjištěných závad</h2>
+    {{#if defects.length}}
+    <table>
+        <thead>
+            <tr>
+                <th>Číslo</th>
+                <th>Popis závady</th>
+                <th>Kritičnost</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each defects}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{description}}</td>
+                <td>{{severity}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <p><strong>ŽÁDNÉ ZÁVADY NEBYLY ZJIŠTĚNY</strong></p>
+    <p>Při zkoušce nebyly zjištěny závady, které by představovaly porušení právních a ostatních předpisů k zajištění bezpečnosti a ochrany zdraví při práci.</p>
+    {{/if}}
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. j) - Soupis zjištěných nebezpečí</h2>
+    {{#if dangers.length}}
+    <table>
+        <thead>
+            <tr>
+                <th>Číslo</th>
+                <th>Popis nebezpečí</th>
+                <th>Riziko</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each dangers}}
+            <tr>
+                <td>{{@index}}</td>
+                <td>{{description}}</td>
+                <td>{{risk_level}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <p><strong>ŽÁDNÁ NEBEZPEČÍ OHROŽUJÍCÍ ŽIVOT, ZDRAVÍ A BEZPEČNOST OSOB NEBYLA ZJIŠTĚNA</strong></p>
+    <p>Při zkoušce nebyly zjištěny situace, které by se mohly stát rizikem ohrožení života, zdraví a bezpečnosti osob nebo ohrožení majetku či životního prostředí.</p>
+    {{/if}}
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. k) - Slovní zhodnocení technického stavu</h2>
+    <h3><strong>{{#if vyhovuje}}TECHNICKÝ STAV SPLŇUJE POŽADAVKY BEZPEČNÉHO A SPOLEHLIVÉHO PROVOZU{{else}}TECHNICKÝ STAV NESPLŇUJE POŽADAVKY BEZPEČNÉHO A SPOLEHLIVÉHO PROVOZU{{/if}}</strong></h3>
+    
+    <p>Vyhrazené zdvihací zařízení - jeřáb {{equipment.equipment_type}} {{equipment.manufacturer}} {{equipment.model}} - bylo podrobeno zkoušce v souladu s nařízením vlády č. 193/2022 Sb. a technickou normou ČSN 27 0142/2023.</p>
+    
+    <p><strong>Detailní hodnocení:</strong></p>
+    <ul>
+        <li><strong>Nosná konstrukce:</strong> {{#if technical_assessment.structure}}{{technical_assessment.structure}}{{else}}Bez viditelných poškození, koroze nebo deformací{{/if}}</li>
+        <li><strong>Bezpečnostní prvky:</strong> {{#if technical_assessment.safety}}{{technical_assessment.safety}}{{else}}Všechny funkční, správně seřízené{{/if}}</li>
+        <li><strong>Mechanismy:</strong> {{#if technical_assessment.mechanisms}}{{technical_assessment.mechanisms}}{{else}}Plynulý chod, účinné brzdění{{/if}}</li>
+        <li><strong>Elektrické zařízení:</strong> {{#if technical_assessment.electrical}}{{technical_assessment.electrical}}{{else}}Bez závad, správná funkce{{/if}}</li>
+        <li><strong>Ochranná zařízení:</strong> {{#if technical_assessment.protection}}{{technical_assessment.protection}}{{else}}Funkční, odpovídají požadavkům{{/if}}</li>
+        <li><strong>Dokumentace:</strong> {{#if technical_assessment.documentation}}{{technical_assessment.documentation}}{{else}}Kompletní, aktuální{{/if}}</li>
+    </ul>
+    
+    <p>{{#if vyhovuje}}Jeřáb je způsobilý k dalšímu bezpečnému provozu do termínu příští pravidelné zkoušky.{{else}}Jeřáb není způsobilý k bezpečnému provozu do odstranění zjištěných závad.{{/if}}</p>
+
+    {{#if revision.conclusion}}
+    <p><strong>Dodatečné poznámky:</strong></p>
+    <p>{{revision.conclusion}}</p>
+    {{/if}}
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. l) - Vyhodnocení předchozích kontrol a zkoušek</h2>
+    <p>Záznamy o předchozích prohlídkách, kontrolách a zkouškách byly vyhodnoceny. {{#if previous_controls_ok}}Všechny závady zjištěné při předchozí revizi byly řádně odstraněny.{{else}}Zjištěny následující problémy s předchozími kontrolami.{{/if}} Pravidelná údržba je prováděna v souladu s požadavky výrobce a provozními předpisy.</p>
+    <p><strong>Trend technického stavu:</strong> {{#if technical_trend}}{{technical_trend}}{{else}}Stabilní, bez zhoršujících se parametrů{{/if}}</p>
+</div>
+
+<div class="section">
+    <h2>§ 9 písm. m) - Potvrzení o předání revizní zprávy</h2>
+    <table>
+        <tr>
+            <td><strong>Datum předání:</strong></td>
+            <td>{{formatDate revision.revision_date}}</td>
+        </tr>
+        <tr>
+            <td><strong>Způsob předání:</strong></td>
+            <td>Osobně</td>
+        </tr>
+        <tr>
+            <td><strong>Předáno:</strong></td>
+            <td>Pověřené osobě provozovatele</td>
+        </tr>
+    </table>
+
+    <div class="signature-area">
+        <p><strong>Podpis revizního technika:</strong><br>
+        <img src="data:image/png;base64,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" alt="Podpis revizního technika" style="width: 120px; height: 120px; margin: 10px 0;"/></p>
+        
+        <p><strong>Převzal:</strong><br>
+        Jméno: _________________________<br>
+        Funkce: _________________________<br>
+        Podpis a datum: _________________________</p>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Dodatečné informace</h2>
+    
+    <p><strong>Lhůty pro následující úkony dle přílohy č. 2 NV 193/2022:</strong></p>
+    <ul>
+        <li><strong>Příští zkouška:</strong> {{formatDate revision.next_revision_date}} (2 roky)</li>
+        <li><strong>Revize:</strong> dle tabulky spektra zatížení a třídy Q</li>
+        <li><strong>Kontroly:</strong> každé 3 měsíce v mezidobí revizí a zkoušek</li>
+        <li><strong>Prohlídky:</strong> na začátku každé pracovní směny</li>
+    </ul>
+    
+    <p><strong>Právní upozornění:</strong><br>
+    Dle ČSN 27 0142/2023, článek 11.5, je provozovatel povinen přijmout nápravná opatření pro odstranění zjištěných závad a minimalizaci možných rizik. Revizní technik neodpovídá za škody způsobené po dni zkoušky vadami materiálu, neodbornou manipulací nebo neoprávněnými zásahy do konstrukce.</p>
+</div>
+
+</div>
+</body>
+</html>

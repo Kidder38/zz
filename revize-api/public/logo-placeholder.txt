@@ -1,0 +1,6 @@
+Sem umístěte logo.png společnosti pro zobrazení v PDF dokumentech.
+
+Logo by mělo být ve formátu PNG s transparentním pozadím pro nejlepší výsledky.
+Doporučené rozměry: šířka 300-400 pixelů, výška proporcionálně.
+
+Název souboru musí být: logo.png

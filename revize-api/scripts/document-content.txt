@@ -1,0 +1,468 @@
+
+
+
+
+Lukáš Holubčák
+
+Revizní technik vyhrazených zdvihacích zařízeníOsvědčení ev.č.: 156/23/R, Z-ZZ-a, a1, a2, a3
+
+
+
+
+
+
+
+
+
+PROTOKOL O REVIZNÍ ZKOUŠCE JEŘÁBUVĚŽOVÉHO
+
+
+
+provedena dle NV Č.193/2022, ČSN 27 0142/2014, dle nařízení vlády č. 378/2001 Sb. a dle návodu k používání (Technických podmínek výrobce)
+
+
+
+Název zařízení:
+
+Provozovatel:
+
+{{vyrobce}} {{ typ }}
+
+{{ firma }}{{ulice}}{{psc }} {{mesto }}
+
+
+
+Typ zařízení:
+
+Umístění jeřábu:
+
+{{typ_jerabu }}
+
+{{umisteni }}
+
+
+
+Výrobce – dodavatel zařízení:
+
+Datum zahájení úkonu:
+
+{{vyrobce}}
+
+{{ datum_zahajeni}}
+
+
+
+Základní technické údaje
+
+Typové označení:
+
+{{ typ }}
+
+Rok výroby:
+
+{{ rok_vyroby }}
+
+Výrobní číslo:
+
+{{ vyrobni_cislo }}
+
+Inventární / evidenční číslo:
+
+{{ evidencni_cislo }}
+
+Vyložení min. / max.:
+
+{{ vyl_min }}/{{vyl_max }}
+
+Nosnost zdvihu:
+
+{{ max_nosnost }}
+
+Výška zdvihu:
+
+{{ vyska_pod_hak }}
+
+Zařazení jeřábu a jeřábové dráhy dle
+
+ČSN EN 1090-2+A1/2012
+
+CC3
+
+
+
+
+
+Celkové hodnocení:
+
+
+
+{{ hodnoceni }}
+
+Příští revizní zkouška jeřábu dle čl. 6.1 ČSN 27 0142/2014 
+
+{{ next_rz }}
+
+Příští revize jeřábu dle
+
+čl. 6.1 ČSN 27 0142/2014 pro 
+
+{{ next_r}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Razítko a podpis revizního technika ZZ:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Protokol převzal
+
+Podpis a datum:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Rozsah revize a zjištěné závady:
+
+
+
+Kontrola technické dokumentace a dokladů jeřábu dle nařízení vlády č. 378/2001 Sb. § 2e, f, g, ČSN 27 0142/2014
+
+
+
+Zápis o výchozí revizi elektrického zařízení
+
+{{ vy_rev_el }}
+
+Zápis o poslední revizi elektrického zařízení
+
+{{ po_rev_el }}
+
+Zápis o poslední provedené revizi jeřábu
+
+{{ po_rev_je}}
+
+Zápis o poslední provedené inspekci
+
+{{ po_insp }}
+
+Deník zdvihacího zařízení
+
+{{ d_zdv_za }}
+
+Návod na obsluhu jeřábu
+
+{{ na_obsl }}
+
+Systém bezpečné práce (SBP)
+
+{{ sbp }}
+
+Výkresová dokumentace strojní a elektrické části
+
+{{ vy_do_str_el }}
+
+Zápisy o běžných a podrobných prohlídkách nosných ocelových konstrukcí jeřábu podle ČSN 73 2604
+
+{{be_po_pro_ocel}}
+
+Dokumentaci a doklad o přeměření dočasné jeřábové dráhy podle ČSN 27 2435
+
+{{ dok_dok_jer_dra }}
+
+Technickou dokumentaci základu nebo kotvení jeřábu
+
+{{ dok_zakl }}
+
+Zpráva o výchozí revizi přívodu podle ČSN 33 1500, ČSN 33 2000-6 a o uzemnění jeřábové dráhy podle ČSN 33 2000-5-54 ed.3
+
+{{ rev_el_pri }}
+
+
+
+
+
+Prohlídka dle ČSN 270142, čl.5, odst. 5.1, čl.13, odst.13.1, čl.15, odst.15.3 Obecně platné podmínky pro zkoušení jeřábů
+
+Dostupnost návodu výrobce pro obsluhu
+
+{{ nvd_obsl }}
+
+{{ nvd_obsl_pop }}
+
+Provádění zápisů v Deníku jeřábu
+
+{{ den_jer }}
+
+{{ den_jer_pop }}
+
+Úroveň prováděné údržby a stav mazání zařízení
+
+{{ udr_maz }}
+
+{{ udr_maz_pop }}
+
+Přístupy na jeřáb a stanoviště obsluhy
+
+{{ pri_sta_obs }}
+
+{{ pri_sta_obs_pop }}
+
+Zjevná porušení nosné konstrukce (svary, šroubové spoje, koroze, trvalé deformace. Trhliny atd.)
+
+{{nos_konstr }}
+
+{{nos_konstr_pop }}
+
+Stav nosných orgánů, háků, kladnic, kotvení atd.
+
+{{nos_hak }}
+
+{{nos_hak_pop }}
+
+U jeřábů ovládaných z kabiny její provedení, vytápění, ventilaci a osvětlení
+
+{{kab }}
+
+{{kab_pop }}
+
+Dostupnost hasícího přístroje
+
+{{has_prst}}
+
+{{has_prst_pop}}
+
+Provedení, čitelnost a funkce všech informačních a výstražných označení a zařízení
+
+{{pro_inf}}
+
+{{pro_inf_pop}}
+
+Funkce ukazatele vyložení
+
+
+
+{{fu_vyl}}
+
+{{pro_inf_pop}}
+
+Funkce anemometru
+
+{{pro_ane}}
+
+{{pro_ane_pop}}
+
+Použitelnost a vhodnost komunikačních systémů
+
+{{pou_sys}}
+
+{{pou_sys_pop}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Funkční zkouška dle ČSN 270142, čl.5, odst. 5.2, čl.13, odst.13.1.4, čl.15 odst.15.3 Obecně platné podmínky pro zkoušení jeřábů
+
+Funkce a správné označení ovládacích zařízení
+
+{{fu_ovl}}
+
+{{fu_ovl_pop}}
+
+Seřízení a funkce zabezpečovacích zařízení (koncových a omezovacích vypínačů, signálních zařízení atd.)
+
+{{zab_zar}}
+
+{{zab_zar_pop}}
+
+Správné funkce technologických zařízení charakterizující použití jeřábu (Zařízení pro zavěšení nebo uchopení břemen atd.)
+
+{{fu_tech}}
+
+{{fu_tech_pop}}
+
+Správnost funkce a označení jednotlivých ovládacích zařízení jeřábu
+
+{{spra_fu_zar }}
+
+{{spra_fu_zar_pop }}
+
+Funkce zastavení stop
+
+{{fu_zas_stop }}
+
+{{fu_zas_stop_pop }}
+
+Jednotlivé pohybové mechanismy, účinnost brzdících systémů, plynulost pohybů a jejich regulace
+
+{{poh_mech }}
+
+{{poh_mech_pop }}
+
+Správné seřízení a funkčnost všech použitých omezovacích a indikačních zařízení.
+
+{{fu_omez }}
+
+{{fu_omez_pop }}
+
+V případě vybavení jeřábu dálkovým ovládáním, funkčnost všech ovladačem řízených funkcí
+
+{{fu_dal }}
+
+{{fu_dal_pop }}
+
+
+
+Zkoušky se zatížením dle ČSN 270142, čl.5, odst. 5.3, čl.13, odst.13.1.4, čl.15 odst.15.4 Obecně platné podmínky pro zkoušení jeřábů
+
+Dynamická zkouška se zkušebním břemenem o hmotnosti 1,1násobku nosnosti jeřábu 1)
+
+{{dyn_zkou }}
+
+{{dyn_zkou_pop}}
+
+Zkouška omezovače nosnosti 2)
+
+{{omez_nos }}
+
+{{omez_nos_pop}}
+
+Zkouška stability 3)
+
+{{zkous_stab}}
+
+{{zkous_stab_pop}}
+
+
+
+1)	Zkušebním břemenem o hmotnosti 1,1násobku nosnosti jeřábu byly vykonány všechny dovolené pohyby nejnižšími až nejvyššími rychlostmi včetně zkoušky brzd a bezpečnostních zařízení. Břemenem rovným jmenovité nosnosti jeřábu byly vykonány současně všechny pohyby uvedené v technické dokumentaci. U jeřábů vybavených dvěma brzdami byla prověřena činnost každé z nich samostatně.
+
+2) 	Omezovač nosnosti se musí aktivovat při nejnižší rychlosti pracovní rychlosti do 115% nosnosti, pokud výrobce nepředepíše v návodu nepředepíše jinak. Provedena pro dva body křivky nosnosti.
+
+3)	Provedena k ověření bezpečnosti jeřábu proti ztrátě stability. Zkušební břemeno o hmotnosti 1,25násobku nosnosti jeřábu bylo opatrně nadzvednuto do výšky 10 cm nad terén v nejnepříznivější poloze s ohledem na stabilitu jeřábu (dle předpisu výrobce)
+
+
+
+Použitá kalibrovaná měřidla
+
+
+
+Posuvné měřidlo analogové 0-200mm
+
+
+
+Posuvné měřidlo analogové 0-500mm
+
+
+
+Hloubkoměr analogový 0-200mm
+
+
+
+Ocelový svinovací 5 ti metr
+
+
+
+Laserový měřicí přístroj 
+
+
+
+Nářadí a pomůcky
+
+
+
+Jeřábová váha
+
+
+
+
+
+
+
+Závěr:
+
+
+
+{{ hodnoceni }}
+
+
+
+Dle ČSN 27 0142/2014, článek 11. 5, je provozovatel (pověřená osoba – uživatel ZZ), povinen přijmout nápravná opatření pro odstranění zjištěných závad a minimalizaci možných rizik.
+
+
+
+Za odstraňování závad dle platné legislativy, zejména zákona 262/2006 Sb. část 5, 309/2006 Sb. § 4 odstavec 1 a, b, c odpovídá uživatel.
+
+Organizace majitele (vlastník), nebo organizace uživatele (uživatel) musí zajistit pravidelné vedení záznamu o používání, inspekcích a údržbě jeřábu, jenž jsou nezbytné pro vyhodnocení stavu jeřábu.
+
+
+
+Revizní technik neodpovídá za případné škody na zdraví či majetku způsobené provozem jeřábu, vadami materiálu, neodbornou manipulací, příp. zásahem neoprávněných osob do konstrukce a mechanizmů jeřábu po dni revize.
+
+
+
+
+
+Provedl: 
+

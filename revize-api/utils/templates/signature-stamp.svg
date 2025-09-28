@@ -1,0 +1,33 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Vnější kruh -->
+  <circle cx="60" cy="60" r="58" fill="none" stroke="#4169E1" stroke-width="2"/>
+  
+  <!-- Vnitřní kruh -->
+  <circle cx="60" cy="60" r="48" fill="none" stroke="#4169E1" stroke-width="1"/>
+  
+  <!-- Horní text "LUKÁŠ HOLUBČÁK" -->
+  <path id="upperCircle" d="M 20 60 A 40 40 0 0 1 100 60" fill="none" stroke="none"/>
+  <text font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#4169E1">
+    <textPath href="#upperCircle" startOffset="50%" text-anchor="middle">
+      LUKÁŠ HOLUBČÁK
+    </textPath>
+  </text>
+  
+  <!-- Dolní text "156/23/R" -->
+  <path id="lowerCircle" d="M 100 60 A 40 40 0 0 1 20 60" fill="none" stroke="none"/>
+  <text font-family="Arial, sans-serif" font-size="10" fill="#4169E1">
+    <textPath href="#lowerCircle" startOffset="50%" text-anchor="middle">
+      156/23/R
+    </textPath>
+  </text>
+  
+  <!-- Střední podpis "Lukáš Holubčák" -->
+  <text x="60" y="55" font-family="Brush Script MT, cursive" font-size="14" fill="#4169E1" text-anchor="middle">
+    Lukáš Holubčák
+  </text>
+  
+  <!-- Datum -->
+  <text x="60" y="72" font-family="Arial, sans-serif" font-size="8" fill="#4169E1" text-anchor="middle">
+    {{formatDate revision.revision_date}}
+  </text>
+</svg>
